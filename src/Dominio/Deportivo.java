@@ -1,12 +1,13 @@
 package Dominio;
 
+import java.time.LocalDateTime;
+
 public class Deportivo extends Evento {
 	
 	private final float recargo = (float) 1.30;
 	
-	public Deportivo(String caracteristicas, int cantidadEntradas,
-			boolean clasificacion) {
-		super(caracteristicas, cantidadEntradas);
+	public Deportivo(String descripcion, LocalDateTime fechaHora, int minutosDuracion, int cantidadEntradas, boolean clasificacion) {
+		super(TiposEvento.Deportivo, descripcion, fechaHora, minutosDuracion, cantidadEntradas);
 		
 		this.clasificacion = clasificacion;
 	}
