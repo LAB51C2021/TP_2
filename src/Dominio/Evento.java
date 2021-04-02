@@ -1,18 +1,48 @@
 package Dominio;
 
-public class Evento 
-{
-	public Evento(String descripcion, int cantidadCupones)
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+
+public class Evento {
+	
+	public Evento(TiposEvento tipo, String descripcion, LocalDateTime fechaHora, int minutosDuracion, int cantidadEntradas)
 	{
 		this.descripcion = descripcion;
 		
-		this.cantidadEntradas = cantidadCupones;
+		this.cantidadEntradas = cantidadEntradas;
+		
+		this.cantidadEntradasVendidas = 0;
 	}
+	
+	private TiposEvento tipo;
 	
 	private int cantidadEntradas;
 	
-	private int cantidadVendida;
+	private static int cantidadEntradasVendidas;
 	
+	private String descripcion;
+
+	private float precio;
+	
+	private LocalDateTime fechaHora;
+	
+	private int minutosDuracion;
+	
+	private ArrayList<Entrada> entradas;
+	
+	protected void venderEntrada(Entrada entrada) throws Exception {
+		try {
+			if(cantidadEntradasVendidas < cantidadEntradas) {
+				cantidadEntradasVendidas++;
+				entradas.add(entrada);
+			}else {
+				throw new Exception("No hay entradas disponibles para este evento.");
+			}
+		}
+		catch(Exception ex) {
+			throw ex;
+		}
+	}
 	
 	public String getCaracteristicas() {
 		return descripcion;
@@ -21,11 +51,5 @@ public class Evento
 	public float getPrecio() {
 		return precio;
 	}
-
-	private String descripcion;
-
-	private float precio;
-	
-	//private ArrayList<Entradas> entradaList;
 	
 }

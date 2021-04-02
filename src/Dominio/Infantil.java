@@ -1,6 +1,6 @@
 package Dominio;
 
-import java.util.ArrayList;
+import java.time.LocalDateTime;
 
 public class Infantil extends Evento {
 
@@ -10,13 +10,13 @@ public class Infantil extends Evento {
 	
 	private final int limiteEdad = 8;
 	
-	public Infantil(String descripcion, float precio, int cantidadEntradas, boolean incluyeSouvenir) {
-		super(descripcion, cantidadEntradas);
+	private boolean incluyeSouvenir;
+	
+	public Infantil(String descripcion, LocalDateTime fechaHora, int minutosDuracion, int cantidadEntradas, boolean incluyeSouvenir) {
+		super(TiposEvento.Infantil, descripcion, fechaHora, minutosDuracion, cantidadEntradas);
 		
 		this.incluyeSouvenir = incluyeSouvenir;
 	}
-	
-	private boolean incluyeSouvenir;
 	
 	public float GetPrecioPorEdad(int edad)
 	{
@@ -27,6 +27,18 @@ public class Infantil extends Evento {
 		else
 		{
 			return precioMenor;
+		}
+	}
+	
+	public Entrada venderEntrada(int edad) throws Exception {
+		try {
+			EntradaInfantil entrada = new EntradaInfantil(this.GetPrecioPorEdad(edad), edad);
+			super.venderEntrada(entrada);
+			
+			return entrada;
+		}
+		catch(Exception ex) {
+			throw ex;
 		}
 	}
 	

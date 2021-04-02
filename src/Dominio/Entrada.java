@@ -1,22 +1,18 @@
 package Dominio;
 
-import java.sql.Time;
-import java.time.LocalDateTime;
-
 public class Entrada {
 
 	private static int id = 1;
-	
-	public Entrada(float precio, LocalDateTime fechaHora, Time tiempoDuracion) {
-		super();
-		this.precio = precio;
-		this.fechaHora = fechaHora;
-		this.tiempoDuracion = tiempoDuracion;
-	}
+
+	private int codigoEntrada;
 	
 	private float precio;
 	
-	private LocalDateTime fechaHora;
+	public Entrada(float precio) {
+		
+		this.precio = precio;
+		id++;
+		codigoEntrada = id;
+	}
 	
-	private Time tiempoDuracion;
 }
