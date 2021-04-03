@@ -28,7 +28,7 @@ public class Principal {
 
 	public static void EventoDeportivo_SeteoCorrecto_Caso3()
 	{
-		Deportivo eventoDeportivo_1 = new Deportivo("Deportivo 1 - Futbol Internacional", LocalDateTime.now(), 120, 5, new Futbol(true));
+		Deportivo eventoDeportivo_1 = new Deportivo("Deportivo 1 - Futbol Internacional", LocalDateTime.now(), 120, 5, new Futbol(Clasificacion.Internacional));
 		eventoDeportivo_1.GenerarEntradas();
 		eventoDeportivo_1.GenerarEntradas();
 		eventoDeportivo_1.GenerarEntradas();
@@ -36,7 +36,7 @@ public class Principal {
 		System.out.print(eventoDeportivo_1.toString());
 		eventoDeportivo_1.VerEntradas();
 
-		Deportivo eventoDeportivo_2 = new Deportivo("Deportivo 2 - Futbol nacional", LocalDateTime.now(), 120, 5, new Futbol(false));
+		Deportivo eventoDeportivo_2 = new Deportivo("Deportivo 2 - Futbol Nacional", LocalDateTime.now(), 120, 5, new Futbol(Clasificacion.Nacional));
 		eventoDeportivo_2.GenerarEntradas();
 		eventoDeportivo_2.GenerarEntradas();
 		eventoDeportivo_2.GenerarEntradas();
