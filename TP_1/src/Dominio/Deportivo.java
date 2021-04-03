@@ -36,6 +36,6 @@ public class Deportivo extends Evento {
 	public String toString() {
 		return super.toString() + 
 				"\nDeporte: " + deporte.toString() +
-				"\nInternacional: " + deporte.GetStringClasificacion();
+				"\nClasificacion: " + deporte.GetStringClasificacion();
 	}
 }

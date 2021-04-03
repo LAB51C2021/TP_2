@@ -21,14 +21,7 @@ public class Recital extends Evento {
 	
 	public float GetPrecio(boolean esVip)
 	{
-		if (esVip)
-		{
-			return precioVip;
-		}
-		else
-		{
-			return precio;
-		}
+		return esVip ? precioVip : precio;
 	}
 	
 	@Override
