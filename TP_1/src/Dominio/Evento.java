@@ -1,31 +1,70 @@
 package Dominio;
 
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+
 public class Evento 
 {
-	public Evento(String descripcion, int cantidadCupones)
+	public Evento(String nombre, String descripcion, LocalDateTime fechaHora, int minutosDuracion, int cantidadCuponesMaximo)
 	{
+		this.nombre = nombre;
 		this.descripcion = descripcion;
+		this.fechaHora = fechaHora;
+		this.minutosDuracion = minutosDuracion;
+		this.cantidadCuponesMaximo = cantidadCuponesMaximo;
 		
-		this.cantidadEntradas = cantidadCupones;
+		entradaList = new ArrayList<Entrada>();
+	}
+
+	// Propiedades
+	private String nombre;
+	private String descripcion;
+	private LocalDateTime fechaHora;
+	private int minutosDuracion;
+	private int cantidadCuponesMaximo;
+	
+	private ArrayList<Entrada> entradaList;
+	
+	// Metodos
+	protected void VerEntradas()
+	{
+		for (Entrada entrada : entradaList)
+		{
+			System.out.println(entrada.toString());
+		}
 	}
 	
-	private int cantidadEntradas;
+	protected void GenerarEntradas(Entrada entrada) throws Exception
+	{
+		if (GetCantidadEntradas() > cantidadCuponesMaximo)
+		{
+			throw new Exception("Se ha llegado al límite de entradas disponibles del evento " + descripcion + ".");
+		}
+
+		entradaList.add(entrada);
+	}
 	
-	private int cantidadVendida;
+	// Getters y Setters
+	public int GetCantidadEntradas()
+	{
+		return entradaList == null ? 0 : entradaList.size() + 1;
+	}
 	
-	
-	public String getCaracteristicas() {
+	public String GetDescripcion() {
 		return descripcion;
 	}
 
-	public float getPrecio() {
-		return precio;
+	public LocalDateTime GetFechaHora() {
+		return fechaHora;
 	}
 
-	private String descripcion;
-
-	private float precio;
+	public int GetMinutosDuracion() {
+		return minutosDuracion;
+	}
 	
-	//private ArrayList<Entradas> entradaList;
-	
+	public String toString() {
+		return "----------------------------"
+				+ "\nNombre: " + nombre
+				+ "\nDescripcion: " + descripcion;
+	}
 }
