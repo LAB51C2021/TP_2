@@ -1,22 +1,37 @@
 package Dominio;
 
-import java.sql.Time;
 import java.time.LocalDateTime;
 
 public class Entrada {
 
 	private static int id = 1;
 	
-	public Entrada(float precio, LocalDateTime fechaHora, Time tiempoDuracion) {
+	public Entrada(float precio, LocalDateTime fechaHora, int minutosDuracion) {
 		super();
+		
 		this.precio = precio;
 		this.fechaHora = fechaHora;
-		this.tiempoDuracion = tiempoDuracion;
+		this.minutosDuracion = minutosDuracion;
+		
+		idEntrada = id;
+		id++;
 	}
 	
+	// Propiedades
+	private int idEntrada;
 	private float precio;
-	
 	private LocalDateTime fechaHora;
+	private int minutosDuracion;
 	
-	private Time tiempoDuracion;
+	// Metodos
+	
+	@Override
+	public String toString() {
+		return "\n----------------------------" +
+				"\nId: " + idEntrada + 
+				"\nPrecio: " + precio + "$" +
+				"\nFecha: " + fechaHora.toLocalDate() +
+				"\nHora: " + fechaHora.getHour() + ":" + fechaHora.getMinute() +
+				"\nDuracion: " + minutosDuracion + " minutos.";
+	}
 }
