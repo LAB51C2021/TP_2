@@ -1,28 +1,11 @@
 package Dominio;
 
-public class Futbol implements Deporte {
+public class Futbol extends Deporte {
 
-	private final String nombre = "Futbol";
-	private final float precio = (float)300;
+	private final static String nombre = "Futbol";
+	private final static float precio = (float)300;
 
 	public Futbol(Clasificacion clasificacion) {
-		this.clasificacion = clasificacion;
-	}
-	
-	private Clasificacion clasificacion;
-	
-	public float GetPrecio() {
-		return this.clasificacion == Clasificacion.Internacional ? this.precio*(float)1.30 : this.precio;
-	}
-
-	@Override
-	public String GetStringClasificacion() {
-		return this.clasificacion.toString();
-	}
-	
-	@Override
-	public String toString()
-	{
-		return nombre;
+		super(nombre, precio, clasificacion);
 	}
 }
