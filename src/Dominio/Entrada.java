@@ -27,7 +27,7 @@ public class Entrada {
 	public String toString() {
 		return "\n----------------------------" +
 				"\nId: " + idEntrada + 
-				"\nPrecio: " + precio + "$" +
+				"\nPrecio: $ " + precio +
 				"\nFecha: " + fechaHora.toLocalDate() +
 				"\nHora: " + fechaHora.getHour() + ":" + fechaHora.getMinute();
 	}
