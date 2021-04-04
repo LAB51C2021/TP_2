@@ -1,6 +1,7 @@
 package Dominio;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 
 public class Principal {
 
@@ -45,8 +46,25 @@ public class Principal {
 		eventoDeportivo_2.VerEntradas();
 	}
 	
+	public static void EventoRecital_SeteoCorrecto_Caso4()
+	{
+		Banda bandaPrincipal = new Banda("Linkin Park", GenerosMusicales.Rock);
+		ArrayList<Banda> bandasSoporte = new ArrayList<Banda>();
+		//bandasSoporte.add(new Banda("Alma Fuerte", GenerosMusicales.Heavy_metal));
+		//bandasSoporte.add(new Banda("Turf", GenerosMusicales.Pop));
+		
+		
+		Recital eventoRecital_1 = new Recital("Recital 1 - Linkin Park World Tour", LocalDateTime.now(), 120, 5, GenerosMusicales.Rock, bandaPrincipal, bandasSoporte);
+		eventoRecital_1.GenerarEntradas(true);
+		eventoRecital_1.GenerarEntradas(true);
+		eventoRecital_1.GenerarEntradas(false);
+		
+		System.out.print(eventoRecital_1.toString());
+		eventoRecital_1.VerEntradas();
+	}
+	
 	public static void main(String[] args) throws Exception {
 		
-		EventoDeportivo_SeteoCorrecto_Caso3();
+		EventoRecital_SeteoCorrecto_Caso4();
 	}
 }

@@ -4,10 +4,8 @@ import java.time.LocalDateTime;
 
 public class Deportivo extends Evento {
 
-	private final static String nombre = "Deportivo";
-
 	public Deportivo(String descripcion, LocalDateTime fechaHora, int minutosDuracion, int cantidadCuponesMaxima, Deporte deporte) {
-		super(nombre, descripcion, fechaHora, minutosDuracion, cantidadCuponesMaxima);
+		super(TiposEvento.Deportivo, descripcion, fechaHora, minutosDuracion, cantidadCuponesMaxima);
 
 		this.deporte = deporte;
 	}
@@ -20,7 +18,7 @@ public class Deportivo extends Evento {
 	{
 		try
 		{
-			Entrada entrada = new Entrada(deporte.GetPrecio(), this.GetFechaHora(), this.GetMinutosDuracion());
+			Entrada entrada = new Entrada(deporte.GetPrecio(), this.GetFechaHora());
 			super.GenerarEntradas(entrada);
 			
 			return entrada;

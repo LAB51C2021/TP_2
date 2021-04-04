@@ -5,9 +5,9 @@ import java.util.ArrayList;
 
 public class Evento 
 {
-	public Evento(String nombre, String descripcion, LocalDateTime fechaHora, int minutosDuracion, int cantidadCuponesMaximo)
+	public Evento(TiposEvento tipo, String descripcion, LocalDateTime fechaHora, int minutosDuracion, int cantidadCuponesMaximo)
 	{
-		this.nombre = nombre;
+		this.tipo = tipo;
 		this.descripcion = descripcion;
 		this.fechaHora = fechaHora;
 		this.minutosDuracion = minutosDuracion;
@@ -17,7 +17,7 @@ public class Evento
 	}
 
 	// Propiedades
-	private String nombre;
+	private TiposEvento tipo;
 	private String descripcion;
 	private LocalDateTime fechaHora;
 	private int minutosDuracion;
@@ -38,7 +38,7 @@ public class Evento
 	{
 		if (GetCantidadEntradas() > cantidadCuponesMaximo)
 		{
-			throw new Exception("Se ha llegado al límite de entradas disponibles del evento " + descripcion + ".");
+			throw new Exception("Se ha llegado al lï¿½mite de entradas disponibles del evento " + descripcion + ".");
 		}
 
 		entradaList.add(entrada);
@@ -64,7 +64,10 @@ public class Evento
 	
 	public String toString() {
 		return "----------------------------"
-				+ "\nNombre: " + nombre
-				+ "\nDescripcion: " + descripcion;
+				+ "\nTipo: " + tipo
+				+ "\nDescripcion: " + descripcion
+				+ "\nFecha: " + fechaHora.toLocalDate() 
+				+ "\nHora: " + fechaHora.getHour() + ":" + fechaHora.getMinute()
+				+ "\nDuracion: " + minutosDuracion + " minutos.";
 	}
 }
