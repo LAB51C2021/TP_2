@@ -63,8 +63,33 @@ public class Principal {
 		eventoRecital_1.VerEntradas();
 	}
 	
+	public static void EventoTeatro_SeteoCorrecto_Caso1()
+	{
+		ArrayList<Actor> actoresPrincipales = new ArrayList<Actor>();
+		actoresPrincipales.add(new Actor("Freddie","Mercury"));
+		actoresPrincipales.add(new Actor("Brian","May"));
+		actoresPrincipales.add(new Actor("Roger","Taylor"));
+		//actoresPrincipales.add(new Actor("John","Deacon"));
+		
+		
+		if(actoresPrincipales.size() > 0 & actoresPrincipales.size() <= 3 ) {
+			Teatro eventoTeatral_1 = new Teatro("Bohemian Rhapsody", LocalDateTime.now(), 112, 4, GenerosTeatrales.Teatro , actoresPrincipales);
+			eventoTeatral_1.GenerarEntradas();
+			eventoTeatral_1.GenerarEntradas();
+			eventoTeatral_1.GenerarEntradas();
+			
+			System.out.print(eventoTeatral_1.toString());
+			eventoTeatral_1.VerEntradas();
+		}
+		else{
+			System.out.print("Puede haber hasta 3 Actores principales");
+		}
+		
+	}
+	
 	public static void main(String[] args) throws Exception {
 		
-		EventoRecital_SeteoCorrecto_Caso4();
+		//EventoRecital_SeteoCorrecto_Caso4();
+		EventoTeatro_SeteoCorrecto_Caso1();
 	}
 }
