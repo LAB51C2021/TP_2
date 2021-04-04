@@ -4,8 +4,8 @@ import java.time.LocalDateTime;
 
 public class EntradaInfantil extends Entrada {
 
-	public EntradaInfantil(float precio, LocalDateTime fechaHora, int minutosDuracion, int edad) {
-		super(precio, fechaHora, minutosDuracion);
+	public EntradaInfantil(float precio, LocalDateTime fechaHora, int edad) {
+		super(precio, fechaHora);
 		
 		this.edad = edad;
 	}
@@ -16,6 +16,6 @@ public class EntradaInfantil extends Entrada {
 	public String toString()
 	{
 		return super.toString() + 
-				"\nEdad: " + edad + " años";
+				"\nEdad: " + edad + " aï¿½os";
 	}
 }

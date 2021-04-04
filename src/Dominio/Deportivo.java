@@ -18,7 +18,7 @@ public class Deportivo extends Evento {
 	{
 		try
 		{
-			Entrada entrada = new Entrada(deporte.GetPrecio(), this.GetFechaHora(), this.GetMinutosDuracion());
+			Entrada entrada = new Entrada(deporte.GetPrecio(), this.GetFechaHora());
 			super.GenerarEntradas(entrada);
 			
 			return entrada;

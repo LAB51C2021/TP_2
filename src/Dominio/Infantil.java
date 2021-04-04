@@ -9,7 +9,7 @@ public class Infantil extends Evento {
 	private final static int limiteEdad = 8;
 	
 	public Infantil(String descripcion, LocalDateTime fechaHora, int minutosDuracion, int cantidadCuponesMaximo, boolean incluyeSouvenir) {
-		super(TiposEvento.Infantil, descripcion, fechaHora, minutosDuracion, cantidadCuponesMaximo);
+		super(TiposEvento.Infantil, descripcion, fechaHora, cantidadCuponesMaximo);
 		
 		this.incluyeSouvenir = incluyeSouvenir;
 	}
@@ -22,7 +22,7 @@ public class Infantil extends Evento {
 	{
 		try
 		{
-			Entrada entrada = new EntradaInfantil(GetPrecioPorEdad(edad), this.GetFechaHora(), this.GetMinutosDuracion(), edad);
+			Entrada entrada = new EntradaInfantil(GetPrecioPorEdad(edad), this.GetFechaHora(), edad);
 			super.GenerarEntradas(entrada);
 			
 			return entrada;

@@ -4,8 +4,8 @@ import java.time.LocalDateTime;
 
 public class EntradaRecital extends Entrada {
 
-	public EntradaRecital(float precio, LocalDateTime fechaHora, int minutosDuracion, boolean esVip) {
-		super(precio, fechaHora, minutosDuracion);
+	public EntradaRecital(float precio, LocalDateTime fechaHora, boolean esVip) {
+		super(precio, fechaHora);
 		
 		this.esVip = esVip;
 	}
@@ -16,6 +16,6 @@ public class EntradaRecital extends Entrada {
 	public String toString()
 	{
 		return super.toString() + 
-				"\nVip: " + (esVip == true ? "Sí" : "No");
+				"\nVip: " + (esVip == true ? "Sï¿½" : "No");
 	}
 }
