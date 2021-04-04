@@ -16,6 +16,6 @@ public class EntradaRecital extends Entrada {
 	public String toString()
 	{
 		return super.toString() + 
-				"\nVip: " + (esVip == true ? "S�" : "No");
+				"\nVip: " + (esVip == true ? "Si" : "No");
 	}
 }

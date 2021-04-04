@@ -42,7 +42,7 @@ public class Infantil extends Evento {
 	
 	public String GetStringSouvenir()
 	{
-		return incluyeSouvenir == true ? "Sí." : "No.";
+		return incluyeSouvenir == true ? "Si" : "No.";
 	}
 	
 	@Override
