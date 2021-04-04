@@ -4,13 +4,12 @@ import java.time.LocalDateTime;
 
 public class Infantil extends Evento {
 
-	private final static String nombre = "Infantil";
 	private final static float precioMayor = 500;
 	private final static float precioMenor = 250;
 	private final static int limiteEdad = 8;
 	
 	public Infantil(String descripcion, LocalDateTime fechaHora, int minutosDuracion, int cantidadCuponesMaximo, boolean incluyeSouvenir) {
-		super(nombre, descripcion, fechaHora, minutosDuracion, cantidadCuponesMaximo);
+		super(TiposEvento.Infantil, descripcion, fechaHora, minutosDuracion, cantidadCuponesMaximo);
 		
 		this.incluyeSouvenir = incluyeSouvenir;
 	}
@@ -43,7 +42,7 @@ public class Infantil extends Evento {
 	
 	public String GetStringSouvenir()
 	{
-		return incluyeSouvenir == true ? "Sí." : "No.";
+		return incluyeSouvenir == true ? "SÃ­." : "No.";
 	}
 	
 	@Override

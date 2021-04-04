@@ -4,12 +4,11 @@ import java.time.LocalDateTime;
 
 public class Recital extends Evento {
 
-	private final static String nombre = "Recital";
 	private final float precio = 800;
 	private final float precioVip = 1500;
 	
 	public Recital(String descripcion, LocalDateTime fechaHora, int minutosDuracion, int cantidadCuponesMaxima, boolean incluyeSouvenir) {
-		super(nombre, descripcion, fechaHora, minutosDuracion, cantidadCuponesMaxima);
+		super(TiposEvento.Recital, descripcion, fechaHora, minutosDuracion, cantidadCuponesMaxima);
 
 	}
 	
