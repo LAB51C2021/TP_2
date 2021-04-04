@@ -7,8 +7,8 @@ public class Recital extends Evento {
 	private final float precio = 800;
 	private final float precioVip = 1500;
 	
-	public Recital(String descripcion, LocalDateTime fechaHora, int cantidadCuponesMaxima, boolean incluyeSouvenir) {
-		super(TiposEvento.Recital, descripcion, fechaHora, cantidadCuponesMaxima);
+	public Recital(String descripcion, LocalDateTime fechaHora, int minutosDuracion, int cantidadCuponesMaxima, boolean incluyeSouvenir) {
+		super(TiposEvento.Recital, descripcion, fechaHora, minutosDuracion, cantidadCuponesMaxima);
 
 	}
 	

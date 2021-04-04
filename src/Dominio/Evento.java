@@ -64,8 +64,8 @@ public class Evento
 	
 	public String toString() {
 		return "----------------------------"
-				+ "\Tipo: " + tipo
-				+ "\nDescripcion: " + descripcion +
+				+ "\nTipo: " + tipo
+				+ "\nDescripcion: " + descripcion
 				+ "\nFecha: " + fechaHora.toLocalDate() 
 				+ "\nHora: " + fechaHora.getHour() + ":" + fechaHora.getMinute()
 				+ "\nDuracion: " + minutosDuracion + " minutos.";

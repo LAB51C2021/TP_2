@@ -9,7 +9,7 @@ public class Infantil extends Evento {
 	private final static int limiteEdad = 8;
 	
 	public Infantil(String descripcion, LocalDateTime fechaHora, int minutosDuracion, int cantidadCuponesMaximo, boolean incluyeSouvenir) {
-		super(TiposEvento.Infantil, descripcion, fechaHora, cantidadCuponesMaximo);
+		super(TiposEvento.Infantil, descripcion, fechaHora, minutosDuracion, cantidadCuponesMaximo);
 		
 		this.incluyeSouvenir = incluyeSouvenir;
 	}
