@@ -5,7 +5,6 @@ import java.util.ArrayList;
 
 public class Teatro extends Evento {
 	
-	
 	private final float precio = (float) 1350.50;
 	
 	public Teatro(String descripcion, LocalDateTime fechaHora, int minutosDuracion, int cantidadCuponesMaxima,
@@ -19,7 +18,6 @@ public class Teatro extends Evento {
 	
 	private GenerosTeatrales generoTeatral;
 	private ArrayList<Actor> actoresPrincipales;
-
 
 	public Entrada GenerarEntradas()
 	{
@@ -44,8 +42,6 @@ public class Teatro extends Evento {
 	{
 		return precio;
 	}
-	
-	
 	
 	public GenerosTeatrales getGeneroTeatral() {
 		return generoTeatral;

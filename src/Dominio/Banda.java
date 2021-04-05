@@ -15,5 +15,4 @@ public class Banda {
 		return "\n\tDescripcion: " + descripcion + 
 				"\n\tGenero: " + genero;
 	}
-		
 }

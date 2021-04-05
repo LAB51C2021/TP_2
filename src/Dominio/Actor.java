@@ -14,5 +14,4 @@ public class Actor {
 		return "\n\tNombre: " + nombre + 
 				"\n\tApellido: " + apellido;
 	}
-
 }
