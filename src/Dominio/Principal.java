@@ -71,7 +71,6 @@ public class Principal {
 		actoresPrincipales.add(new Actor("Roger","Taylor"));
 		actoresPrincipales.add(new Actor("John","Deacon"));
 		
-		
 		Teatro eventoTeatral_1 = new Teatro("Bohemian Rhapsody", LocalDateTime.now(), 112, 4, GenerosTeatrales.Teatro , actoresPrincipales);
 		eventoTeatral_1.GenerarEntradas();
 		eventoTeatral_1.GenerarEntradas();
