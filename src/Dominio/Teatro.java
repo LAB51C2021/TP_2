@@ -26,8 +26,11 @@ public class Teatro extends Evento {
 		try
 		{
 			Entrada entrada = new EntradaTeatro(precio, LocalDateTime.now());
-			super.GenerarEntradas(entrada);
-			
+			if(actoresPrincipales.size() > 0 & actoresPrincipales.size() <= 3)
+				super.GenerarEntradas(entrada);
+			else
+				throw new Exception("Puede haber hasta 3 Actores principales");
+				
 			return entrada;
 		}
 		catch (Exception ex)
