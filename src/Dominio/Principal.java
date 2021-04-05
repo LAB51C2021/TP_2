@@ -7,7 +7,7 @@ public class Principal {
 
 	public static void ValidacionLimiteEntradas_Caso1()
 	{
-		//Caso 1: Validación de límite de entradas
+		//Caso 1: Validaciï¿½n de lï¿½mite de entradas
 		Infantil eventoInfantil_1 = new Infantil("Infantil 1", LocalDateTime.now(), 120, 2, true);
 		eventoInfantil_1.GenerarEntradas(5);
 		eventoInfantil_1.GenerarEntradas(23);
@@ -69,21 +69,17 @@ public class Principal {
 		actoresPrincipales.add(new Actor("Freddie","Mercury"));
 		actoresPrincipales.add(new Actor("Brian","May"));
 		actoresPrincipales.add(new Actor("Roger","Taylor"));
-		//actoresPrincipales.add(new Actor("John","Deacon"));
+		actoresPrincipales.add(new Actor("John","Deacon"));
 		
 		
-		if(actoresPrincipales.size() > 0 & actoresPrincipales.size() <= 3 ) {
-			Teatro eventoTeatral_1 = new Teatro("Bohemian Rhapsody", LocalDateTime.now(), 112, 4, GenerosTeatrales.Teatro , actoresPrincipales);
-			eventoTeatral_1.GenerarEntradas();
-			eventoTeatral_1.GenerarEntradas();
-			eventoTeatral_1.GenerarEntradas();
-			
-			System.out.print(eventoTeatral_1.toString());
-			eventoTeatral_1.VerEntradas();
-		}
-		else{
-			System.out.print("Puede haber hasta 3 Actores principales");
-		}
+		Teatro eventoTeatral_1 = new Teatro("Bohemian Rhapsody", LocalDateTime.now(), 112, 4, GenerosTeatrales.Teatro , actoresPrincipales);
+		eventoTeatral_1.GenerarEntradas();
+		eventoTeatral_1.GenerarEntradas();
+		eventoTeatral_1.GenerarEntradas();
+		
+		System.out.print(eventoTeatral_1.toString());
+		eventoTeatral_1.VerEntradas();
+
 		
 	}
 	
