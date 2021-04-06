@@ -7,7 +7,7 @@ public class Principal {
 
 	public static void ValidacionLimiteEntradas_Caso1()
 	{
-		//Caso 1: Validaci�n de l�mite de entradas
+		//Caso 1: Validacion de limite de entradas
 		Infantil eventoInfantil_1 = new Infantil("Infantil 1", LocalDateTime.now(), 120, 2, true);
 		eventoInfantil_1.GenerarEntradas(5);
 		eventoInfantil_1.GenerarEntradas(23);
@@ -63,7 +63,7 @@ public class Principal {
 		eventoRecital_1.VerEntradas();
 	}
 	
-	public static void EventoTeatro_SeteoCorrecto_Caso1()
+	public static void EventoTeatro_SeteoCorrecto_Caso5()
 	{
 		ArrayList<Actor> actoresPrincipales = new ArrayList<Actor>();
 		actoresPrincipales.add(new Actor("Freddie","Mercury"));
@@ -84,8 +84,10 @@ public class Principal {
 	
 	public static void main(String[] args) throws Exception {
 		
+		//ValidacionLimiteEntradas_Caso1();
+		EventoInfantil_SeteoCorrecto_Caso2();
+		//EventoDeportivo_SeteoCorrecto_Caso3();
 		//EventoRecital_SeteoCorrecto_Caso4();
-		//EventoTeatro_SeteoCorrecto_Caso1();
-		EventoTeatro_SeteoCorrecto_Caso1();
+		//EventoTeatro_SeteoCorrecto_Caso5();
 	}
 }
