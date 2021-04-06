@@ -86,7 +86,7 @@ public class Principal {
 		
 		ValidacionLimiteEntradas_Caso1();
 		//EventoInfantil_SeteoCorrecto_Caso2();
-		EventoDeportivo_SeteoCorrecto_Caso3();
+		//EventoDeportivo_SeteoCorrecto_Caso3();
 		//EventoRecital_SeteoCorrecto_Caso4();
 		//EventoTeatro_SeteoCorrecto_Caso5();
 	}
