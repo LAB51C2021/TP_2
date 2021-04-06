@@ -1,6 +1,7 @@
 package Dominio;
 
 import java.time.LocalDateTime;
+import java.util.Formatter;
 
 public class Entrada {
 
@@ -25,10 +26,12 @@ public class Entrada {
 	
 	@Override
 	public String toString() {
+		Formatter obj = new Formatter();
+		
 		return "\n----------------------------" +
 				"\nId: " + idEntrada + 
 				"\nPrecio: $ " + precio +
 				"\nFecha: " + fechaHora.toLocalDate() +
-				"\nHora: " + fechaHora.getHour() + ":" + fechaHora.getMinute();
+				"\nHora: " + fechaHora.getHour() + ":" + String.valueOf(obj.format("%02d", fechaHora.getMinute()));
 	}
 }

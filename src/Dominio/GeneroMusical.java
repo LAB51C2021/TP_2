@@ -1,7 +1,6 @@
 package Dominio;
 
 public class GeneroMusical implements IGenero {
-	//Rock("Rock"), Heavy_metal("Heavy metal"), Reggaeton("Reggaet�n"), Trap("Trap"), Latinos("Latinos"), Pop("Pop");
 	
 	private TiposGeneros tipo;
     private String descripcion;

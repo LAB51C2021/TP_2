@@ -16,6 +16,6 @@ public class EntradaInfantil extends Entrada {
 	public String toString()
 	{
 		return super.toString() + 
-				"\nEdad: " + edad + " aï¿½os";
+				"\nEdad: " + edad + " años";
 	}
 }

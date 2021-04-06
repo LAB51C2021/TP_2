@@ -84,9 +84,9 @@ public class Principal {
 	
 	public static void main(String[] args) throws Exception {
 		
-		//ValidacionLimiteEntradas_Caso1();
-		EventoInfantil_SeteoCorrecto_Caso2();
-		//EventoDeportivo_SeteoCorrecto_Caso3();
+		ValidacionLimiteEntradas_Caso1();
+		//EventoInfantil_SeteoCorrecto_Caso2();
+		EventoDeportivo_SeteoCorrecto_Caso3();
 		//EventoRecital_SeteoCorrecto_Caso4();
 		//EventoTeatro_SeteoCorrecto_Caso5();
 	}

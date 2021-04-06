@@ -1,7 +1,6 @@
 package Dominio;
 
 public class GeneroTeatral implements IGenero {
-	//Drama("Drama"), Teatro("Teatro"), Comedia("Comedia");
 		
 	private TiposGeneros tipo;
     private String descripcion;

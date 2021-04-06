@@ -38,7 +38,7 @@ public class Evento
 	{
 		if (GetCantidadEntradas() > cantidadCuponesMaximo)
 		{
-			throw new Exception("Se ha llegado al l�mite de entradas disponibles del evento " + descripcion + ".");
+			throw new Exception("Se ha llegado al limite de entradas disponibles del evento " + descripcion + ".");
 		}
 
 		entradaList.add(entrada);
