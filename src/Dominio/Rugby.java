@@ -7,4 +7,8 @@ public class Rugby extends Deporte {
 	public Rugby(Clasificacion clasificacion) {
 		super(TiposDeportes.Rugby, precio, clasificacion);
 	}
+	
+	public String GetTypeBall() {
+		return "Pelota ovalada N° 3";
+	}
 }

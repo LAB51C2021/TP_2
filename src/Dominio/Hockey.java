@@ -7,4 +7,8 @@ public class Hockey extends Deporte {
 	public Hockey(Clasificacion clasificacion) {
 		super(TiposDeportes.Hockey, precio, clasificacion);
 	}
+	
+	public String GetTypeBall() {
+		return "Bocha de hockey";
+	}
 }

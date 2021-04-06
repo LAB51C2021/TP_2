@@ -1,6 +1,6 @@
 package Dominio;
 
-public class Deporte {
+public abstract class Deporte {
 	
 	private final static float recargo = (float)1.30;
 	
@@ -14,6 +14,8 @@ public class Deporte {
 	private TiposDeportes tipoDeporte;
 	private float precio;
 	private Clasificacion clasificacion;
+	
+	public abstract String GetTypeBall();
 	
 	public float GetPrecio() {
 		return this.clasificacion == Clasificacion.Internacional ? this.precio*recargo : this.precio;

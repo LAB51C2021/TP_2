@@ -7,4 +7,8 @@ public class Futbol extends Deporte {
 	public Futbol(Clasificacion clasificacion) {
 		super(TiposDeportes.Futbol, precio, clasificacion);
 	}
+	
+	public String GetTypeBall() {
+		return "Pelota N° 5";
+	}
 }

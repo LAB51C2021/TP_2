@@ -9,7 +9,7 @@ public class Recital extends Evento {
 	private final float precioVip = 1500;
 	
 	public Recital(String descripcion, LocalDateTime fechaHora, int minutosDuracion, int cantidadCuponesMaximo, 
-			GenerosMusicales generoMusical, Banda bandaPrincipal, ArrayList<Banda> bandasSoporte) {
+			GeneroMusical generoMusical, Banda bandaPrincipal, ArrayList<Banda> bandasSoporte) {
 		super(TiposEvento.Recital, descripcion, fechaHora, minutosDuracion, cantidadCuponesMaximo);
 		
 		this.generoMusical = generoMusical;
@@ -17,7 +17,7 @@ public class Recital extends Evento {
 		this.bandasSoporte = bandasSoporte;
 	}
 	
-	private GenerosMusicales generoMusical;
+	private GeneroMusical generoMusical;
 	private Banda bandaPrincipal;
 	private ArrayList<Banda> bandasSoporte;
 	
@@ -42,11 +42,11 @@ public class Recital extends Evento {
 		return esVip ? precioVip : precio;
 	}
 	
-	public GenerosMusicales getGeneroMusical() {
+	public GeneroMusical getGeneroMusical() {
 		return generoMusical;
 	}
 
-	public void setGeneroMusical(GenerosMusicales generoMusical) {
+	public void setGeneroMusical(GeneroMusical generoMusical) {
 		this.generoMusical = generoMusical;
 	}
 
@@ -61,7 +61,7 @@ public class Recital extends Evento {
 	@Override
 	public String toString() {
 		return super.toString() +
-				"\nGenero: " + getGeneroMusical() +
+				"\nGenero: " + getGeneroMusical().GetGeneroDescripcion() +
 				"\nBanda principal: " + this.bandaPrincipalToString() +
 				(bandasSoporte.size() > 0 ? "\nBandas soporte: " + bandasSoporteToString() : "");
 	}

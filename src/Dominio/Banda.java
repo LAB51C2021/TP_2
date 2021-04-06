@@ -3,9 +3,9 @@ package Dominio;
 public class Banda {
 	
 	private String descripcion;
-	private GenerosMusicales genero;
+	private GeneroMusical genero;
 	
-	public Banda(String descripcion, GenerosMusicales genero) {
+	public Banda(String descripcion, GeneroMusical genero) {
 		this.descripcion = descripcion;
 		this.genero = genero;
 	}
@@ -13,6 +13,6 @@ public class Banda {
 	@Override
 	public String toString() {
 		return "\n\tDescripcion: " + descripcion + 
-				"\n\tGenero: " + genero;
+				"\n\tGenero: " + genero.GetGeneroDescripcion();
 	}
 }

@@ -8,7 +8,7 @@ public class Teatro extends Evento {
 	private final float precio = (float) 1350.50;
 	
 	public Teatro(String descripcion, LocalDateTime fechaHora, int minutosDuracion, int cantidadCuponesMaxima,
-			GenerosTeatrales generoTeatral, ArrayList<Actor> actoresPrincipales) {
+			GeneroTeatral generoTeatral, ArrayList<Actor> actoresPrincipales) {
 		super(TiposEvento.Teatro, descripcion, fechaHora, minutosDuracion, cantidadCuponesMaxima);
 		
 		this.generoTeatral = generoTeatral;
@@ -16,7 +16,7 @@ public class Teatro extends Evento {
 
 	}
 	
-	private GenerosTeatrales generoTeatral;
+	private GeneroTeatral generoTeatral;
 	private ArrayList<Actor> actoresPrincipales;
 
 	public Entrada GenerarEntradas()
@@ -43,11 +43,11 @@ public class Teatro extends Evento {
 		return precio;
 	}
 	
-	public GenerosTeatrales getGeneroTeatral() {
+	public GeneroTeatral getGeneroTeatral() {
 		return generoTeatral;
 	}
 
-	public void setGeneroTeatral(GenerosTeatrales generoTeatral) {
+	public void setGeneroTeatral(GeneroTeatral generoTeatral) {
 		this.generoTeatral = generoTeatral;
 	}
 
@@ -58,7 +58,7 @@ public class Teatro extends Evento {
 	@Override
 	public String toString() {
 		return super.toString() +
-				"\nGenero: " + getGeneroTeatral() +
+				"\nGenero: " + getGeneroTeatral().GetGeneroDescripcion() +
 				"\nActores Pricipales: " + (actoresPrincipales.size() <= 3 ? ActorPrincipalToString() : "");
 	}
 }

@@ -34,6 +34,7 @@ public class Deportivo extends Evento {
 	public String toString() {
 		return super.toString() + 
 				"\nDeporte: " + deporte.toString() +
+				"\nPelota utilizada: " + deporte.GetTypeBall() +
 				"\nClasificacion: " + deporte.GetStringClasificacion();
 	}
 }

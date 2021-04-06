@@ -48,13 +48,13 @@ public class Principal {
 	
 	public static void EventoRecital_SeteoCorrecto_Caso4()
 	{
-		Banda bandaPrincipal = new Banda("Linkin Park", GenerosMusicales.Rock);
+		Banda bandaPrincipal = new Banda("Linkin Park", new GeneroMusical("Rock"));
 		ArrayList<Banda> bandasSoporte = new ArrayList<Banda>();
-		//bandasSoporte.add(new Banda("Alma Fuerte", GenerosMusicales.Heavy_metal));
-		//bandasSoporte.add(new Banda("Turf", GenerosMusicales.Pop));
+		//bandasSoporte.add(new Banda("Alma Fuerte", new GeneroMusical("Heavy metal")));
+		//bandasSoporte.add(new Banda("Turf", new GeneroMusical("Pop")));
 		
 		
-		Recital eventoRecital_1 = new Recital("Recital 1 - Linkin Park World Tour", LocalDateTime.now(), 120, 5, GenerosMusicales.Rock, bandaPrincipal, bandasSoporte);
+		Recital eventoRecital_1 = new Recital("Recital 1 - Linkin Park World Tour", LocalDateTime.now(), 120, 5, new GeneroMusical("Rock"), bandaPrincipal, bandasSoporte);
 		eventoRecital_1.GenerarEntradas(true);
 		eventoRecital_1.GenerarEntradas(true);
 		eventoRecital_1.GenerarEntradas(false);
@@ -69,9 +69,9 @@ public class Principal {
 		actoresPrincipales.add(new Actor("Freddie","Mercury"));
 		actoresPrincipales.add(new Actor("Brian","May"));
 		actoresPrincipales.add(new Actor("Roger","Taylor"));
-		actoresPrincipales.add(new Actor("John","Deacon"));
+		//actoresPrincipales.add(new Actor("John","Deacon"));
 		
-		Teatro eventoTeatral_1 = new Teatro("Bohemian Rhapsody", LocalDateTime.now(), 112, 4, GenerosTeatrales.Teatro , actoresPrincipales);
+		Teatro eventoTeatral_1 = new Teatro("Bohemian Rhapsody", LocalDateTime.now(), 112, 4, new GeneroTeatral("Drama") , actoresPrincipales);
 		eventoTeatral_1.GenerarEntradas();
 		eventoTeatral_1.GenerarEntradas();
 		eventoTeatral_1.GenerarEntradas();
@@ -85,6 +85,7 @@ public class Principal {
 	public static void main(String[] args) throws Exception {
 		
 		//EventoRecital_SeteoCorrecto_Caso4();
+		//EventoTeatro_SeteoCorrecto_Caso1();
 		EventoTeatro_SeteoCorrecto_Caso1();
 	}
 }
