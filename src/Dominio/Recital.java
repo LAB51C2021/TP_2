@@ -42,8 +42,6 @@ public class Recital extends Evento {
 		return esVip ? precioVip : precio;
 	}
 	
-	
-	
 	public GenerosMusicales getGeneroMusical() {
 		return generoMusical;
 	}

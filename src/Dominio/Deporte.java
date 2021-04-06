@@ -4,14 +4,14 @@ public class Deporte {
 	
 	private final static float recargo = (float)1.30;
 	
-	public Deporte(String nombre, float precio, Clasificacion clasificacion) {
+	public Deporte(TiposDeportes tipoDeporte, float precio, Clasificacion clasificacion) {
 		super();
-		this.nombre = nombre;
+		this.tipoDeporte = tipoDeporte;
 		this.precio = precio;
 		this.clasificacion = clasificacion;
 	}
 
-	private String nombre;
+	private TiposDeportes tipoDeporte;
 	private float precio;
 	private Clasificacion clasificacion;
 	
@@ -26,6 +26,6 @@ public class Deporte {
 	@Override
 	public String toString()
 	{
-		return nombre;
+		return tipoDeporte.toString();
 	}
 }

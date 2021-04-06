@@ -13,6 +13,5 @@ public class EntradaTeatro extends Entrada {
 	public String toString()
 	{
 		return super.toString();
-	}
-	
+	}	
 }

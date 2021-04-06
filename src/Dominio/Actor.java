@@ -11,8 +11,6 @@ public class Actor {
 
 	@Override
 	public String toString() {
-		return "\n\tNombre: " + nombre + 
-				"\n\tApellido: " + apellido;
+		return "\n\tNombre y apellido: " + nombre + " " + apellido;
 	}
-
 }
