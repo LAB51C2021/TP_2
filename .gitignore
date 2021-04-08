@@ -8,3 +8,8 @@
 # JDT-specific (Eclipse Java Development Tools)     
 .classpath
 .classpath
+
+*.class
+*.jar
+*.war
+*.ear
