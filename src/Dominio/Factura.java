@@ -8,13 +8,15 @@ import java.util.List;
 
 public class Factura {
 
-	public Factura(Cliente cliente) {
+	public Factura(Cliente cliente, ArrayList<Entrada> entradas) {
 
 		Formatter obj = new Formatter();
 		
 		this.cliente = cliente;
-		this.montoTotal = GetTotalEntradas(cliente.getEntradas());
+		this.entradas = entradas;
+		this.montoTotal = GetTotalEntradas(entradas);
 		this.fechaVenta = LocalDate.now();
+		
 		
 		numeroFactura = String.valueOf(obj.format("%08d", id));
 		id++;
@@ -28,6 +30,8 @@ public class Factura {
 	private float montoTotal;
 	private LocalDate fechaVenta;
 	
+	private List<Entrada> entradas;
+	
 	/*Metodos*/
 	private float GetTotalEntradas(List<Entrada> entradas)
 	{
@@ -39,6 +43,10 @@ public class Factura {
 		}
 		
 		return total;
+	}
+
+	public List<Entrada> getEntradas() {
+		return entradas;
 	}
 	
 	@Override
