@@ -1,5 +1,7 @@
 package Dominio;
 
+import Enum.TiposGeneros;
+
 public class GeneroMusical implements IGenero {
 	//Rock("Rock"), Heavy_metal("Heavy metal"), Reggaeton("Reggaet�n"), Trap("Trap"), Latinos("Latinos"), Pop("Pop");
 	

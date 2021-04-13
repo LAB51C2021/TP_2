@@ -1,4 +1,4 @@
-package Dominio;
+package Enum;
 
 public enum TiposEvento {
 	Infantil,

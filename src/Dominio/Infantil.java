@@ -2,6 +2,8 @@ package Dominio;
 
 import java.time.LocalDateTime;
 
+import Enum.TiposEvento;
+
 public class Infantil extends Evento {
 
 	private final static float precioMayor = 500;

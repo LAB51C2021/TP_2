@@ -1,5 +1,7 @@
 package Dominio;
 
+import Enum.TiposGeneros;
+
 public class GeneroTeatral implements IGenero {
 	//Drama("Drama"), Teatro("Teatro"), Comedia("Comedia");
 		
