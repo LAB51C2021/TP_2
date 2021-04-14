@@ -3,7 +3,7 @@ package Dominio;
 import java.time.LocalDateTime;
 import java.util.Formatter;
 
-public class Entrada {
+public class Entrada implements Comparable<Entrada> {
 
 	private static int id = 1;
 	
@@ -42,5 +42,19 @@ public class Entrada {
 
 	public void setPrecio(float precio) {
 		this.precio = precio;
+	}
+
+	@Override
+	public int compareTo(Entrada o) {
+		if (this == o) return 0;
+        if (o == null) return 1;
+        if (this.getClass() != o.getClass()) return 1;
+        Entrada entrada = (Entrada) o;
+        if(id == entrada.id 
+                && idEntrada == entrada.idEntrada 
+                && precio == entrada.precio
+                && fechaHora.equals(entrada.fechaHora))
+        	return 0;
+        return 1;
 	}
 }
