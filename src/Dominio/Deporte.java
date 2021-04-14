@@ -1,5 +1,8 @@
 package Dominio;
 
+import Enum.Clasificacion;
+import Enum.TiposDeportes;
+
 public abstract class Deporte {
 	
 	private final static float recargo = (float)1.30;

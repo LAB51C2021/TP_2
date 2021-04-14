@@ -3,6 +3,8 @@ package Dominio;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 
+import Enum.TiposEvento;
+
 public class Evento 
 {
 	public Evento(TiposEvento tipo, String descripcion, LocalDateTime fechaHora, int minutosDuracion, int cantidadCuponesMaximo)

@@ -1,5 +1,8 @@
 package Dominio;
 
+import Enum.Clasificacion;
+import Enum.TiposDeportes;
+
 public class Futbol extends Deporte {
 
 	private final static float precio = (float)300;

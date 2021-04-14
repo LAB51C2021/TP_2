@@ -2,6 +2,8 @@ package Dominio;
 
 import java.time.LocalDateTime;
 
+import Enum.TiposEvento;
+
 public class Deportivo extends Evento {
 
 	public Deportivo(String descripcion, LocalDateTime fechaHora, int minutosDuracion, int cantidadCuponesMaxima, Deporte deporte) {

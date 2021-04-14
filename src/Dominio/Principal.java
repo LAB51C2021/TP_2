@@ -2,6 +2,11 @@ package Dominio;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.List;
+import java.util.ListIterator;
+import java.util.TreeSet;
+
+import Enum.Clasificacion;
 
 public class Principal {
 
@@ -78,16 +83,30 @@ public class Principal {
 		
 		System.out.print(eventoTeatral_1.toString());
 		eventoTeatral_1.VerEntradas();
-
+	}
+	
+	public static void Ejercicio1_TP2()
+	{
+		Deportivo eventoChasqui = new Deportivo("11 vs 11 chasqui.", LocalDateTime.now(), 90, 50, new Futbol(Clasificacion.Nacional));
 		
+		ArrayList<Entrada> entradaList = new ArrayList<Entrada>();
+		entradaList.add(eventoChasqui.GenerarEntradas());
+		entradaList.add(eventoChasqui.GenerarEntradas());
+		entradaList.add(eventoChasqui.GenerarEntradas());
+		entradaList.add(eventoChasqui.GenerarEntradas());
+		entradaList.add(eventoChasqui.GenerarEntradas());
+
+		ListIterator<Entrada> entradasListIterator = entradaList.listIterator();
+	
+		while (entradasListIterator.hasNext())
+		{
+			Entrada entrada = entradasListIterator.next();
+			System.out.print(entrada);
+		}
 	}
 	
 	public static void main(String[] args) throws Exception {
 		
-		//ValidacionLimiteEntradas_Caso1();
-		EventoInfantil_SeteoCorrecto_Caso2();
-		//EventoDeportivo_SeteoCorrecto_Caso3();
-		//EventoRecital_SeteoCorrecto_Caso4();
-		//EventoTeatro_SeteoCorrecto_Caso5();
+		Ejercicio1_TP2();
 	}
 }

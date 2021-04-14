@@ -3,6 +3,8 @@ package Dominio;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 
+import Enum.TiposEvento;
+
 public class Teatro extends Evento {
 	
 	private final float precio = (float) 1350.50;
