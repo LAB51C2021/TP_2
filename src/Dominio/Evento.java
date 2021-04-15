@@ -64,6 +64,10 @@ public class Evento
 		return minutosDuracion;
 	}
 	
+	public ArrayList<Entrada> getEntradaList() {
+		return entradaList;
+	}
+
 	public String toString() {
 		return "----------------------------"
 				+ "\nTipo: " + tipo

@@ -33,7 +33,7 @@ public class Factura {
 	private List<Entrada> entradas;
 	
 	/*Metodos*/
-	private float GetTotalEntradas(List<Entrada> entradas)
+	public static float GetTotalEntradas(List<Entrada> entradas)
 	{
 		float total = 0;
 		

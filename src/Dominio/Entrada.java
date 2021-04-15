@@ -43,6 +43,10 @@ public class Entrada implements Comparable<Entrada> {
 	public void setPrecio(float precio) {
 		this.precio = precio;
 	}
+	
+	public void setFechaHora(LocalDateTime fechaHora) {
+		this.fechaHora = fechaHora;
+	}
 
 	@Override
 	public int compareTo(Entrada o) {
@@ -57,4 +61,37 @@ public class Entrada implements Comparable<Entrada> {
         	return 0;
         return 1;
 	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((fechaHora == null) ? 0 : fechaHora.hashCode());
+		result = prime * result + idEntrada;
+		result = prime * result + Float.floatToIntBits(precio);
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Entrada other = (Entrada) obj;
+		if (fechaHora == null) {
+			if (other.fechaHora != null)
+				return false;
+		} else if (!fechaHora.equals(other.fechaHora))
+			return false;
+		if (idEntrada != other.idEntrada)
+			return false;
+		if (Float.floatToIntBits(precio) != Float.floatToIntBits(other.precio))
+			return false;
+		return true;
+	}
+	
+	
 }
